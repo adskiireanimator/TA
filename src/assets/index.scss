@@ -1,0 +1,41 @@
+$maincolor: #00acee;
+$textsize: 30px;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: $textsize;
+}
+.post {
+    border: 1px solid black;
+}
+
+.test {
+    font-size: 40px;
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    background-color: $maincolor;
+}
+.mainlink {
+    list-style-type: none;
+}
+.navbar nav {
+    display: flex;
+}
+main {
+    display: flex;
+}
+.sidemenu {
+    width: 22%;
+    margin-right: 3%;
+    border-right: 1px solid black;
+}
+.mainpage {
+    width: 70%;
+}
+.empty-layout {
+    background-color: aliceblue;
+}

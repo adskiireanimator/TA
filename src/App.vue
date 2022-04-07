@@ -1,30 +1,38 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <component :is="layout">
+      <router-view />
+    </component>
+  </div>
 </template>
 
+<script>
+import { mapGetters } from "vuex";
+import formlayout from "@/layouts/formlayout.vue";
+import mainlayout from "@/layouts/mainlayout.vue";
+
+export default {
+  computed: {
+    layout() {
+      return this.$route.meta.layout || "mainlayout";
+    },
+    allposts() {
+      console.log(this.$store.getters.allposts);
+      return this.$store.getters.allposts;
+    },
+  },
+  components: {
+    mainlayout,
+    formlayout,
+  },
+  mounted() {
+    this.$store.dispatch("fetchposts");
+  },
+};
+</script>
+
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+//@import "~materialize-css/dist/css/materialize.min.css";
+@import "assets/index.scss";
 </style>
