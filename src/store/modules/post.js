@@ -13,9 +13,9 @@ export default{
         }
     },
     actions: {
-        async fetchposts(ctx){
-            const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3');
-            const posts=await res.json();
+        async fetchposts(ctx, limit=3){
+            const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}`);
+            const posts= await res.json();
             ctx.commit('updateposts',posts)
         }
     },

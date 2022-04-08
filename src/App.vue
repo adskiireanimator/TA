@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 import formlayout from "@/layouts/formlayout.vue";
 import mainlayout from "@/layouts/mainlayout.vue";
 
@@ -16,17 +15,10 @@ export default {
     layout() {
       return this.$route.meta.layout || "mainlayout";
     },
-    allposts() {
-      console.log(this.$store.getters.allposts);
-      return this.$store.getters.allposts;
-    },
   },
   components: {
     mainlayout,
     formlayout,
-  },
-  mounted() {
-    this.$store.dispatch("fetchposts");
   },
 };
 </script>
