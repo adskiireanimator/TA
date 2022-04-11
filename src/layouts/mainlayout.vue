@@ -1,8 +1,13 @@
 <template>
   <div>
     <div class="navbar">
-      <a href="/news"><div class="mainlink">news</div></a>
-      <a href="/login"><div class="mainlink">login</div></a>
+      <div class="burgermenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a href="/news"><div class="mainlink">Новости</div></a>
+      <a href="/login"><div class="mainlink">Регистрация</div></a>
     </div>
     <main>
       <div class="sidemenu"></div>
