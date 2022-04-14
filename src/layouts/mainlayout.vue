@@ -15,6 +15,7 @@
         <div class="friends-wrapper">
           <div class="friend-container" v-for="user in friends" :key="user.id">
             <a href="#">{{ user.name }}</a>
+            <div class="userphotocontainer"></div>
             <p>{{ user.status }}</p>
           </div>
         </div>

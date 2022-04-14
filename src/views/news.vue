@@ -17,7 +17,7 @@ export default {
     },
   },
   async mounted() {
-    this.$store.dispatch("fetchposts", 4);
+    this.$store.dispatch("fetchposts", 8);
   },
 };
 </script>
