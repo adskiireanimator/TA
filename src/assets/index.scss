@@ -1,3 +1,6 @@
+@import "./scrollfriends.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
 $maincolor: #00acee;
 $textcolor: black;
 $textsize: 30px;
@@ -5,7 +8,8 @@ $textsize: 30px;
 * {
     margin: 0;
     padding: 0;
-    font-size: $textsize;
+
+    font-family: "Montserrat", sans-serif;
 }
 a {
     text-decoration: none;

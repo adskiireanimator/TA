@@ -1,0 +1,25 @@
+.friends-wrapper {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    overflow: hidden;
+}
+.friend-container {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 8px;
+
+    a {
+        font-size: 12px;
+    }
+    p {
+    }
+    .userphotocontainer {
+        height: 40px;
+        width: 40px;
+        border-radius: 8px;
+    }
+}

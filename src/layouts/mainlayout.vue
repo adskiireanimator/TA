@@ -12,13 +12,29 @@
     <main>
       <div class="sidemenu"></div>
       <div class="mainpage">
-        <router-view />
-        <div class="post" v-for="post in allposts" :key="post.id">
-          <h1>{{ post.title }}</h1>
-          <p>{{ post.body }}</p>
+        <div class="friends-wrapper">
+          <div class="friend-container" v-for="user in friends" :key="user.id">
+            <a href="#">{{ user.name }}</a>
+            <p>{{ user.status }}</p>
+          </div>
         </div>
+        <router-view />
       </div>
     </main>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    friends() {
+      return this.$store.getters.friendsarr;
+    },
+  },
+  async mounted() {
+    this.$store.dispatch("fetchusers", 4);
+  },
+};
+</script>
+
 
