@@ -5,10 +5,12 @@
     border-bottom: 2px solid black;
     border-top: 2px solid black;
     overflow: hidden;
+    height: 170px;
 }
+
 .friend-container {
     margin: 10px;
-    min-width: 100px;
+    min-width: 150px;
     padding: 5px;
     height: 140px;
     border: 1px solid black;
@@ -33,4 +35,28 @@
         border: 1px solid black;
         border-radius: 8px;
     }
+}
+
+.prev-transition {
+    height: 170px;
+    opacity: 0;
+    background-color: aqua;
+    min-width: 3%;
+    display: block;
+    position: absolute;
+}
+.prev-transition:hover {
+    opacity: 0.3;
+}
+.next-transition {
+    height: 172px;
+    left: 95%;
+    opacity: 0;
+    background-color: aqua;
+    min-width: 3%;
+    display: block;
+    position: absolute;
+}
+.next-transition:hover {
+    opacity: 0.3;
 }
