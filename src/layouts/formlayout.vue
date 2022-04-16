@@ -1,5 +1,7 @@
 <template>
   <div class="empty-layout">
-    <router-view />
+    <div class="form-container">
+      <router-view />
+    </div>
   </div>
 </template>

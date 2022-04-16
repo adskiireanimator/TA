@@ -1,4 +1,5 @@
 @import "./scrollfriends.scss";
+@import "./formlayout.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
 $maincolor: #00acee;
@@ -14,10 +15,6 @@ $textsize: 30px;
 a {
     text-decoration: none;
     color: $textcolor;
-}
-
-.test {
-    font-size: 40px;
 }
 
 .navbar {
@@ -95,9 +92,6 @@ main {
     width: 70%;
     padding-left: 3%;
 }
-.empty-layout {
-    background-color: aliceblue;
-}
 .posts {
     margin-top: 3%;
 }
@@ -105,4 +99,15 @@ main {
     border: 1px solid black;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 4px;
+    background-color: #e6e6fa;
+}
+::-webkit-scrollbar-thumb {
+    /* 5 - ползунок */
+    border-radius: 8px;
+    background-color: white;
 }
