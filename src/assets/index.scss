@@ -4,12 +4,12 @@
 
 $maincolor: #00acee;
 $textcolor: black;
-$textsize: 30px;
+$textsize: 20px;
 
 * {
     margin: 0;
     padding: 0;
-
+    font-size: $textsize;
     font-family: "Montserrat", sans-serif;
 }
 a {
@@ -79,14 +79,39 @@ main {
     display: flex;
 }
 .sidemenu {
+    top: 80px;
+    position: sticky;
     width: 22%;
     margin-right: 3%;
     box-shadow: 0 0 20px rgb(0 0 0 / 10%);
     border-radius: 8px;
-    height: 600px;
+    height: 29rem;
+    display: flex;
+    flex-direction: column;
     @media screen and (max-width: 800px) {
         display: none;
     }
+    animation-duration: 3s;
+    animation-name: createsidemenu;
+}
+@keyframes createsidemenu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.sidemenu_link {
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 8px;
+}
+.sidemenu_link:hover {
+    background-color: #bbbbbb;
+    cursor: pointer;
 }
 .mainpage {
     width: 70%;

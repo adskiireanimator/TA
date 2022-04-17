@@ -20,6 +20,13 @@ const routes = [
       layout:'mainlayout'
     },
     component:()=>import('../views/news.vue')
+  },{
+    path:'/register',
+    name:'register',
+    meta:{
+      layout:'formlayout'
+    },
+    component:()=>import('../views/register.vue')
   }
 ]
 

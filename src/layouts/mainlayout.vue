@@ -10,7 +10,12 @@
       <a href="/login"><div class="mainlink">Регистрация</div></a>
     </div>
     <main>
-      <div class="sidemenu"></div>
+      <div class="sidemenu">
+        <a href="#"><div class="sidemenu_link">Мои посты</div></a>
+        <a href="#"><div class="sidemenu_link">Мои друзья</div></a>
+        <a href="#"><div class="sidemenu_link">Лента</div></a>
+        <a href="#"><div class="sidemenu_link">ААААААА</div></a>
+      </div>
       <div class="mainpage">
         <div class="friends-wrapper">
           <div class="slider-container">
