@@ -41,13 +41,7 @@ export default {
   },
   methods: {
     submitHandler() {
-      console.log(v$.email);
-      //if (this.$v.$invalid) {
-      //this.$v.$touch();
-      console.log(25);
-      //return;
-      //}
-      //this.$router.push("/aboba");
+      this.$router.push("/news");
     },
   },
 };

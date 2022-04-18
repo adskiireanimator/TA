@@ -14,8 +14,6 @@ $maincolor: #00acee;
     height: 30%;
     width: 30%;
     box-shadow: 0 0 20px rgb(0 0 0 / 10%);
-    animation-duration: 1s;
-    animation-name: test;
 }
 
 .login-wrapper {
@@ -25,6 +23,8 @@ $maincolor: #00acee;
     padding: 30px;
     margin-top: 100px;
     border-radius: 20px;
+    animation-duration: 1s;
+    animation-name: test;
 
     input {
         border: none;
@@ -42,20 +42,15 @@ $maincolor: #00acee;
         margin-top: 10px;
         border: none;
         color: white;
+        cursor: pointer;
     }
     .form_link {
         text-align: center;
+        a:hover {
+            border-bottom: 2px solid black;
+        }
     }
 }
 .invalid {
     background-color: rgba(231, 102, 102, 0.1);
-}
-
-@keyframes test {
-    from {
-        left: 70%;
-    }
-    to {
-        left: 35%;
-    }
 }
