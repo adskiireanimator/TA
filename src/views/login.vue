@@ -1,19 +1,21 @@
 <template>
   <div class="login-wrapper">
     <form action="post" v-on:submit.prevent="submitHandler">
+      <input type="text" v-model.trim="email" placeholder="Введите ваш email" />
       <input
-        type="text"
-        v-model.trim="email"
+        type="password"
+        v-model="password"
+        placeholder="Введите ваш пароль"
         :class="{
-          invalid:
-            ($v.email.$dirty && !$v.email.required) ||
-            ($v.email.$dirty && !$v.email.email),
+          invalid: v$.password.$invalid && !v$.password.required.$invalid,
         }"
       />
-      <input type="password" v-model="password" />
+
       <button type="submit">Send</button>
     </form>
-    <router-link to="/register">Register</router-link>
+    <div class="form_link">
+      <router-link to="/register">Регистрация</router-link>
+    </div>
   </div>
 </template>
 
@@ -22,14 +24,14 @@ import { email, required, minLength } from "vuelidate/lib/validators";
 import { useVuelidate } from "@vuelidate/core";
 export default {
   name: "login",
+  setup() {
+    return { v$: useVuelidate() };
+  },
   data() {
     return {
       email: "",
       password: "",
     };
-  },
-  setup() {
-    return { $v: useVuelidate() };
   },
   validations() {
     return {
@@ -39,12 +41,13 @@ export default {
   },
   methods: {
     submitHandler() {
+      console.log(v$.email);
       //if (this.$v.$invalid) {
       //this.$v.$touch();
       console.log(25);
       //return;
       //}
-      this.$router.push("/aboba");
+      //this.$router.push("/aboba");
     },
   },
 };

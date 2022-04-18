@@ -1,10 +1,55 @@
 <template>
-  <div class="register-wrapper">
-    <form action="post">
-      <input type="password" name="password" />
-      <input type="text" name="login" />
-      <button type="submit"></button>
+  <div class="login-wrapper">
+    <form action="post" v-on:submit.prevent="submitHandler">
+      <input
+        type="text"
+        v-model.trim="email"
+        placeholder="Введите ваш email"
+        :class="{
+          invalid: v$.email.$invalid && !v$.email.required.$invalid,
+        }"
+      />
+      <input
+        type="password"
+        v-model="password"
+        placeholder="Введите ваш пароль"
+        :class="{
+          invalid: v$.password.$invalid && !v$.password.required.$invalid,
+        }"
+      />
+
+      <button type="submit">Send</button>
     </form>
-    <router-link to="/login">Login</router-link>
+    <div class="form_link">
+      <router-link to="/login">Авторизация</router-link>
+    </div>
   </div>
 </template>
+
+<script>
+import { email, required, minLength } from "vuelidate/lib/validators";
+import { useVuelidate } from "@vuelidate/core";
+export default {
+  name: "login",
+  setup() {
+    return { v$: useVuelidate() };
+  },
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  validations() {
+    return {
+      email: { email, required },
+      password: { required, minLength: minLength(6) },
+    };
+  },
+  methods: {
+    submitHandler() {
+      this.$router.push("/aboba");
+    },
+  },
+};
+</script>
