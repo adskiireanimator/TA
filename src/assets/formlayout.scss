@@ -44,6 +44,11 @@ $maincolor: #00acee;
         color: white;
         cursor: pointer;
     }
+    button:hover {
+        padding: 5px 10px;
+        animation-name: buttonanim;
+        animation-duration: 2s;
+    }
     .form_link {
         text-align: center;
         a:hover {
@@ -53,4 +58,12 @@ $maincolor: #00acee;
 }
 .invalid {
     background-color: rgba(231, 102, 102, 0.1);
+}
+@keyframes buttonanim {
+    from {
+        padding: 10px 20px;
+    }
+    to {
+        padding: 5px 10px;
+    }
 }
